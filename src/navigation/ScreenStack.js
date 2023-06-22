@@ -21,6 +21,9 @@ import Community from '../screens/Community';
 import WithFacebook from '../screens/WithFacebook';
 import WithGoogle from '../screens/WithGoogle';
 import Onboarding1 from '../screens/Onboarding1'
+import PersonalProfile from '../screens/PersonalProfile';
+import ResetPassword1 from '../screens/ResetPassword1';
+import ResetPassword2 from '../screens/ResetPassword2';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +54,7 @@ const ScreenStack = () => {
         <Stack.Screen name="Onboarding" component={OnboardingStack} />
       ) : (
         <Stack.Screen name='Main' component={MainStack} />
+        // <Stack.Screen name='ResetPassword2' component={ResetPassword2} />
         // <Stack.Screen name='LogIn' component={LogIn} />
       )}
     </Stack.Navigator>
@@ -70,6 +74,10 @@ const OnboardingStack = () => {
       <Stack.Screen name="WithFacebook" component={WithFacebook} />
       <Stack.Screen name="WithGoogle" component={WithGoogle} />
       <Stack.Screen name="Onboarding1" component={Onboarding1} />
+      <Stack.Screen name="PersonalProfile" component={PersonalProfile} />
+      <Stack.Screen name="ResetPassword1" component={ResetPassword1} />
+      <Stack.Screen name="ResetPassword2" component={ResetPassword2} />
+
 
     </Stack.Navigator>
   );
@@ -101,6 +109,10 @@ const MainStack = () => {
       <Stack.Screen name="WithFacebook" component={WithFacebook} />
       <Stack.Screen name="WithGoogle" component={WithGoogle} />
       <Stack.Screen name="Onboarding1" component={Onboarding1} />
+      <Stack.Screen name="PersonalProfile" component={PersonalProfile} />
+      <Stack.Screen name="ResetPassword1" component={ResetPassword1} />
+      <Stack.Screen name="ResetPassword2" component={ResetPassword2} />
+
     </Stack.Navigator>
   )
 }

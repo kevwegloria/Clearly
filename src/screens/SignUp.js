@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Alert, Pressable,SafeAreaView, Image  } from 'react-native';
 import PhoneInput from 'react-native-phone-number-input';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 
 
@@ -43,13 +43,7 @@ const SignUpScreen = ({ navigation }) => {
                         marginLeft: 20,
                         flexDirection: 'row'
                     }}>
-                    <Icon
-                        name="arrow-left"
-                        onPress={() => navigation.navigate('Onboarding1')}
-                        style={{
-                            fontSize: 25,
-                            color: "white",
-                        }} />
+                    
                     <Image
                    
                         resizeMode='contain'
@@ -60,7 +54,7 @@ const SignUpScreen = ({ navigation }) => {
                 {/* SignUp Container */}
                 <View
                     style={{
-                        paddingTop: 40,
+                        paddingTop: 30,
                         alignItems: 'center'
                     }}>
                     <Text
@@ -119,8 +113,10 @@ const SignUpScreen = ({ navigation }) => {
                         marginTop: 27,
                         marginBottom: 35
                     }}>
-                    <Text style={{ color: 'white', marginBottom: 30 }}>Continue</Text>
-                    <Text style={{ color: 'white', marginBottom: 20  }}>or</Text>
+                    <Text style={{ color: 'white', marginBottom: 20, fontSize: 18, fontWeight: 700 }}
+                     onPress={() => navigation.navigate('PersonalProfile')}
+                    >Continue</Text>
+                    <Text style={{ color: 'white', marginBottom: 5  }}>or</Text>
 
                 </View>
 
@@ -131,7 +127,7 @@ const SignUpScreen = ({ navigation }) => {
                         marginLeft: 20,
                         gap: 5
                     }}>
-                         <View 
+                         <Pressable
                     
                     style={{
                         backgroundColor: 'white',
@@ -147,8 +143,9 @@ const SignUpScreen = ({ navigation }) => {
                         style={{ marginLeft: 30 }}
                     />
                     <Text  style={styles.continueTexts}> Continue with Email</Text>
-                </View> 
-                 <View
+                </Pressable> 
+
+                 <Pressable
                     style={{
                         backgroundColor: 'white',
                         flexDirection: 'row',
@@ -165,8 +162,8 @@ const SignUpScreen = ({ navigation }) => {
                     <Text 
                             onPress={() => navigation.navigate('WithFacebook')}
                     style={styles.continueTexts}> Continue with Facebook</Text>
-                </View> 
-                <View
+                </Pressable> 
+                <Pressable
                     style={{
                         backgroundColor: 'white',
                         flexDirection: 'row',
@@ -183,7 +180,7 @@ const SignUpScreen = ({ navigation }) => {
                     <Text 
                       onPress={() => navigation.navigate('WithGoogle')}
                       style={styles.continueTexts}> Continue with Google</Text>
-                </View> 
+                </Pressable> 
 
 
                 </View>

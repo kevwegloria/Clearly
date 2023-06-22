@@ -209,12 +209,7 @@ const OnboardingScreen = ({ }) => {
                 <Footer />
 
                 <View>
-                <Image
-                   
-                   resizeMode='contain'
-                   source={require('../images/rectangle.png')}
-                   
-               />
+                
                 </View>
 
 
