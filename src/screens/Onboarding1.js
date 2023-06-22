@@ -29,9 +29,9 @@ const Slide = ({ item }) => {
         </View>
     )
 }
-
+                                                                                                                       
 //onboarding screen component proper
-const OnboardingScreen = () => {
+const OnboardingScreen = ({ }) => {
     const [activeSlideIndex, setactiveSlideIndex] = useState(0)
     const ref = useRef(null)
 
@@ -207,6 +207,15 @@ const OnboardingScreen = () => {
                 />
 
                 <Footer />
+
+                <View>
+                <Image
+                   
+                   resizeMode='contain'
+                   source={require('../images/rectangle.png')}
+                   
+               />
+                </View>
 
 
             </ImageBackground>

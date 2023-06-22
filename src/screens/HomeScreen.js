@@ -17,7 +17,7 @@ const HomeScreen = () => {
         style={{
           resizeMode: 'cover',
           width: '100%',
-          height: height * 1.0,
+          height: height * 1.1,
 
         }}
       >

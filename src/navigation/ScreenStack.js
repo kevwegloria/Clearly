@@ -6,7 +6,7 @@ import OnboardingScreen from '../screens/Onboarding1';
 import LogIn from '../screens/LogIn';
 import SignUpScreen from '../screens/SignUp';
 import ForgotPassword from '../screens/ForgotPassword';
-import OTPScreen from '../screens/OTPScreen';
+import OTPScreen from '../screens/PasswordRecoveryOTPScreen';
 
 import BottomTabs from './BottomTabs';
 import HomeScreen from '../screens/HomeScreen';
@@ -18,6 +18,9 @@ import SignLanguageTranscription from '../screens/SignLanguageTranscription';
 import MeetWithTranslator from '../screens/MeetWithTranslator';
 import BasicSignLanguage from '../screens/BasicSignLanguage';
 import Community from '../screens/Community';
+import WithFacebook from '../screens/WithFacebook';
+import WithGoogle from '../screens/WithGoogle';
+import Onboarding1 from '../screens/Onboarding1'
 
 const Stack = createStackNavigator();
 
@@ -64,6 +67,10 @@ const OnboardingStack = () => {
       <Stack.Screen name="HomeScreen" component={BottomTabsStack} /> 
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="PasswordRecoveryOTPScreen" component={OTPScreen} />
+      <Stack.Screen name="WithFacebook" component={WithFacebook} />
+      <Stack.Screen name="WithGoogle" component={WithGoogle} />
+      <Stack.Screen name="Onboarding1" component={Onboarding1} />
+
     </Stack.Navigator>
   );
 };
@@ -91,6 +98,9 @@ const MainStack = () => {
       <Stack.Screen name="MeetWithTranslatorScreen" component={MeetWithTranslator} />
       <Stack.Screen name="BasicSignLanguageScreen" component={BasicSignLanguage} />
       <Stack.Screen name="CommunityScreen" component={Community} />
+      <Stack.Screen name="WithFacebook" component={WithFacebook} />
+      <Stack.Screen name="WithGoogle" component={WithGoogle} />
+      <Stack.Screen name="Onboarding1" component={Onboarding1} />
     </Stack.Navigator>
   )
 }

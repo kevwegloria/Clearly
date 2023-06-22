@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Alert, Pressable, Button, Linking, SafeAreaView, Image  } from 'react-native';
+import { StyleSheet, Text, View, Alert, Pressable,SafeAreaView, Image  } from 'react-native';
 import PhoneInput from 'react-native-phone-number-input';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -8,18 +8,10 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {COLORS} from '../components/styles'
 
     
-const SignUpScreen = ({navigation}) => {
+const SignUpScreen = ({ navigation }) => {
     const [phoneNumber, setPhoneNumber] = React.useState('');
     const phoneInput = React.useRef(null);
-    const handleContinuePress = () => {
-        Linking.openURL('https://mail.google.com/');
-      };
-      const handleFacebookPress = () => {
-        Linking.openURL('https://facebook.com/')
-      }
-      const handleGooglePress = () => {
-        Linking.openURL('https://google.com/')
-      }
+   
 
     const OnPress = () => {
         if (phoneNumber.length !== 0) {
@@ -53,12 +45,13 @@ const SignUpScreen = ({navigation}) => {
                     }}>
                     <Icon
                         name="arrow-left"
-                        onPress={() => navigation.navigate('LogIn')}
+                        onPress={() => navigation.navigate('Onboarding1')}
                         style={{
                             fontSize: 25,
                             color: "white",
                         }} />
                     <Image
+                   
                         resizeMode='contain'
                         source={require('../images/logo.png')}
                         style={{ marginLeft: 30, height:80 }}
@@ -108,7 +101,7 @@ const SignUpScreen = ({navigation}) => {
                     >
                         <Text style={styles.text1}>Send OTP</Text>
                     </Pressable>
-                    <View style={{ marginTop: 20 }}>
+                    <View style={{ marginTop: 31 }}>
                         <Text
                             style={{
                                 color: 'white',
@@ -124,10 +117,10 @@ const SignUpScreen = ({navigation}) => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         marginTop: 27,
-                        marginBottom: 30
+                        marginBottom: 35
                     }}>
-                    <Text style={{ color: 'white', marginBottom: 10 }}>Continue</Text>
-                    <Text style={{ color: 'white' }}>or</Text>
+                    <Text style={{ color: 'white', marginBottom: 30 }}>Continue</Text>
+                    <Text style={{ color: 'white', marginBottom: 20  }}>or</Text>
 
                 </View>
 
@@ -153,7 +146,7 @@ const SignUpScreen = ({navigation}) => {
                         source={require('../images/gmail.png')}
                         style={{ marginLeft: 30 }}
                     />
-                    <Text  onPress={handleContinuePress} style={styles.continueTexts}> Continue with Email</Text>
+                    <Text  style={styles.continueTexts}> Continue with Email</Text>
                 </View> 
                  <View
                     style={{
@@ -169,7 +162,9 @@ const SignUpScreen = ({navigation}) => {
                         source={require('../images/facebook.png')}
                         style={{ marginLeft: 30 }}
                     />
-                    <Text onPress={handleFacebookPress}  style={styles.continueTexts}> Continue with Facebook</Text>
+                    <Text 
+                            onPress={() => navigation.navigate('WithFacebook')}
+                    style={styles.continueTexts}> Continue with Facebook</Text>
                 </View> 
                 <View
                     style={{
@@ -185,7 +180,9 @@ const SignUpScreen = ({navigation}) => {
                         source={require('../images/google.png')}
                         style={{ marginLeft: 30 }}
                     />
-                    <Text onPress={handleGooglePress}  style={styles.continueTexts}> Continue with Google</Text>
+                    <Text 
+                      onPress={() => navigation.navigate('WithGoogle')}
+                      style={styles.continueTexts}> Continue with Google</Text>
                 </View> 
 
 

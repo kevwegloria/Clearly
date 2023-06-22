@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const ChatListScreen = () => {
+const OTPScreen = () => {
   return (
     <View>
-      <Text>Chat List Screen</Text>
+      <Text>OTP</Text>
     </View>
   )
 }
 
-export default ChatListScreen
+export default OTPScreen

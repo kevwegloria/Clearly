@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { height, COLORS } from '../components/styles';
+import { COLORS } from '../components/styles';
 import LoginButton from '../components/loginButtons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -87,21 +87,27 @@ const LogIn = ({ error }) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
-            <ImageBackground source={require('../images/loginPageBackground.png')}
+            <View 
                 style={{
-                    resizeMode: 'cover',
-                    width: '100%',
-                    height: height * 0.95,
-                    alignItems: 'center'
+                    alignItems: 'center',
+                paddingTop:50
                 }}>
-
+                 <Icon
+                        name="arrow-left"
+                        onPress={() => navigation.navigate('Onboarding1')}
+                        style={{
+                            fontSize: 25,
+                            color: "white",
+                           marginRight:300
+                        }} />
                 <Image
+                 resizeMode='contain'
                     source={require('../images/logo.png')}
-                    style={styles.logo}
+                    style={{height: 150, width: 150}}
                 />
 
                 {/* Welcome Text */}
-                <View style={{ marginTop: 120 }}>
+                <View style={{ marginTop: 50, alignItems:'center' }}>
                     <Text style={[
                         styles.text,
                         {
@@ -183,19 +189,20 @@ const LogIn = ({ error }) => {
                 <LoginButton
                     onLoginPress={onLoginPress}
                 />
-
-            </ImageBackground>
+            <View style={{marginTop:35}}>
+                <Image
+               source={require('../images/Rectangle.png')}
+               style={{width: 500}}
+                />
+            </View>
+            </View>
         </SafeAreaView >
 
     )
 }
 
 const styles = StyleSheet.create({
-    logo: {
-        width: 200,
-        height: 120,
-        marginTop: 30
-    },
+    
 
     text: {
         color: COLORS.white,
